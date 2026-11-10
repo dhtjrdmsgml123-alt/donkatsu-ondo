@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://xn--hl0bt7hka133mu9d.com/sitemap.xml
+
+#DaumWebMasterTool:0670a154c4ea532016541d3a282629c2485d3f60d3693c5eb47763c0b5352678:Zle7beqbjbws6dh5S5OBww==
