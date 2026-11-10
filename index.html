@@ -4,7 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <link rel="icon" href="img/logo_v_white.png">
-<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style>
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}
+.proposal{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:28px;align-items:center;margin-top:56px;background:var(--cream);color:var(--ink);border-radius:22px;padding:22px}
+.proposal img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;box-shadow:0 14px 34px rgba(40,6,8,.28);display:block}
+.proposal .tag{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:var(--red)}
+.proposal h3{font-size:clamp(24px,4vw,32px);margin-top:6px}
+.proposal p{color:var(--muted);font-size:15px;margin-top:8px}
+.proposal ul{margin:12px 0 0;padding:0;list-style:none;display:grid;gap:4px;font-size:14px}
+.proposal li::before{content:"✓ ";color:var(--red);font-weight:700}
+.proposal .btns{margin-top:18px}
+@media (max-width:760px){.proposal{grid-template-columns:1fr;padding:16px}}
+.gift{display:flex;gap:12px;align-items:center;margin-top:18px;padding:12px 14px;border-radius:14px;background:#fff;border:1.5px dashed var(--red);font-size:14px;font-weight:500}
+.gift b{color:var(--red)}
+.dl-card{margin:28px auto 0;max-width:420px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;text-align:left}
+.dl-card img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:10px;display:block}
+.dl-card .btn{width:100%;margin-top:14px}
+.dl-card small{display:block;color:var(--muted);font-size:12px;margin-top:8px;text-align:center}
+</style>
 <title>돈까스온도</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="161°C, 1만 번의 테스트로 찾은 온도. 7일 숙성 돈까스 패밀리레스토랑 돈까스온도 의정부본점과 가맹 안내.">
@@ -307,7 +323,7 @@ footer b{color:var(--cream)}
         <p class="lead">1만 번의 테스트로 찾은 튀김 온도 161°C, 7일 숙성 원육. 돈까스부터 파스타, 페스츄리 피자까지 온 가족이 함께 즐기는 돈까스온도입니다.</p>
         <div class="btns">
           <a class="btn btn-gold" href="#menu">메뉴 보기</a>
-          <a class="btn btn-line" href="#franchise">가맹점 모집 안내</a>
+          <a class="btn btn-line" href="#proposal">가맹 제안서 받기</a>
         </div>
       </div>
       <figure class="hero-photo">
@@ -470,6 +486,16 @@ footer b{color:var(--cream)}
       <div><b>홀 100%</b><span>배달 수수료 없는 구조</span></div>
     </div>
     <div class="btns" style="margin-top:40px"><a class="btn btn-gold" href="#apply">가맹 상담 신청하기</a></div>
+    <div class="proposal" id="proposal">
+      <img src="img/proposal-cover.jpg" alt="돈까스온도 가맹 제안서 표지" loading="lazy" width="1467" height="825">
+      <div>
+        <span class="tag">FRANCHISE PROPOSAL · PDF 23쪽</span>
+        <h3>돈까스온도 가맹 제안서</h3>
+        <p>좋은 숫자도, 불리한 숫자도 먼저 보여드립니다. 상담 신청을 남기시면 바로 내려받으실 수 있습니다.</p>
+        <ul><li>본점 매출·수익 구조와 가맹점 시뮬레이션</li><li>창업 비용과 본사 지원 전체</li><li>개설 절차와 우선 모집 지역</li></ul>
+        <div class="btns"><a class="btn btn-red" href="#apply">상담 신청하고 제안서 받기</a></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -542,6 +568,7 @@ footer b{color:var(--cream)}
       <p class="eyebrow" style="margin-top:20px">Franchise Inquiry</p>
       <h1>가맹 상담 신청</h1>
       <p class="lead">남겨주신 연락처로 본사에서 직접 전화드립니다. 상담은 계약이 아니니 편하게 남겨주세요.</p>
+      <div class="gift">📄<span>신청을 마치면 <b>가맹 제안서(PDF)</b>를 바로 내려받으실 수 있습니다.</span></div>
       <form class="form" id="inqForm" novalidate>
         <div class="field" id="f-name">
           <label for="inq-name">성함<em>*</em></label>
@@ -596,6 +623,11 @@ footer b{color:var(--cream)}
       <div class="check">✓</div>
       <h2>상담 신청이 접수되었습니다</h2>
       <p>남겨주신 번호로 본사에서 연락드리겠습니다.</p>
+      <div class="dl-card">
+        <img src="img/proposal-cover.jpg" alt="돈까스온도 가맹 제안서 표지" width="1467" height="825">
+        <a class="btn btn-red" href="docs/ondo-franchise-proposal.pdf" download="돈까스온도_가맹제안서.pdf">가맹 제안서 다운로드 (PDF)</a>
+        <small>PDF 23쪽 · 약 8MB · 와이파이에서 받으시길 권장합니다</small>
+      </div>
       <div class="btns"><a class="btn btn-red" href="#top">홈으로</a><a class="btn btn-ghost" href="#menu">메뉴 보기</a></div>
     </div>
     <p class="alt-call">전화 상담도 가능합니다 · <b>031-848-9993</b></p>
